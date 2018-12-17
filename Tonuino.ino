@@ -188,6 +188,18 @@ void setup() {
   pinMode(buttonPause, INPUT_PULLUP);
   pinMode(buttonUp, INPUT_PULLUP);
   pinMode(buttonDown, INPUT_PULLUP);
+  
+    //Button LEDs ON HISEBA
+
+  pinMode(ledplay, OUTPUT);
+  pinMode(ledup, OUTPUT);
+  pinMode(leddown, OUTPUT);
+
+  digitalWrite(ledplay, HIGH);
+  digitalWrite(ledup, HIGH);
+  digitalWrite(leddown, HIGH);
+  //HISEBA
+  mp3.playMp3FolderTrack(666); 
 
   // Busy Pin
   pinMode(busyPin, INPUT);
@@ -326,7 +338,7 @@ void loop() {
     // Neue Karte konfigurieren
     else {
       knownCard = false;
-      setupCard();
+      //setupCard(); // HISEBA
     }
   }
   mfrc522.PICC_HaltA();
