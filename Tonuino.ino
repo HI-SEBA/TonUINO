@@ -555,7 +555,7 @@ void loop() {
     // Neue Karte konfigurieren
     else {
       knownCard = false;
-      setupCard();
+      //setupCard(); //HISEBA
     }
   }
   mfrc522.PICC_HaltA();
